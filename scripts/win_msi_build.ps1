@@ -55,6 +55,7 @@ $env:GOARCH=$arch
 echo "===> Building Installer"
 Push-Location -Path "scripts\pkg\windows\nri-$arch-installer"
 
+pwd
 $env:exporterName = $exporterName
 . $msBuild/MSBuild.exe nri-installer.wixproj
 
