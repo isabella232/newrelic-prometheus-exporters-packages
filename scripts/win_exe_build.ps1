@@ -71,3 +71,6 @@ if (-not $?)
     echo "Failed building exporter"
     exit -1
 }
+
+ls ".\exporters\$exporterName\target\bin\windows_$arch\"
+pwd 

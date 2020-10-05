@@ -56,6 +56,7 @@ echo "===> Building Installer"
 Push-Location -Path "scripts\pkg\windows\nri-$arch-installer"
 
 pwd
+ls ..\..\..\..\exporters\githubactions\target\bin\windows_amd64\githubactions-exporter.exe
 
 $env:exporterName = $exporterName
 . $msBuild/MSBuild.exe nri-installer.wixproj
