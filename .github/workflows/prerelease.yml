@@ -24,7 +24,7 @@
 on: 
   push:
     branches:
-      - feature/ci
+      - feature/publish-pipeline
 
 env:
   PFX_CERTIFICATE_BASE64: ${{ secrets.PFX_CERTIFICATE_BASE64 }} # base64 encoded
