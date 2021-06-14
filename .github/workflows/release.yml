@@ -12,6 +12,9 @@ jobs:
     steps:
       - id: release_details
         run: |
+          RELEASE_VERSION=$(echo "${{ github.event.release.tag_name }}" | sed 's/^v//')
+          echo "RELEASE_VERSION=$RELEASE_VERSION" >> $GITHUB_ENV
+
           integration=$(echo ${{ github.event.release.name }})
           echo "::set-output name=integration::${integration}"
 
